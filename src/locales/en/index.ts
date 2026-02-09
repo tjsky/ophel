@@ -259,6 +259,10 @@ export const en = {
   promptMergeSuccess: "Merged: {updated} updated, {added} added",
   promptSettingsTitle: "Prompts Settings",
   promptSettingsDesc: "Configure interactions in the prompts tab",
+  promptSubmitShortcutLabel: "Send shortcut",
+  promptSubmitShortcutDesc: "Applies to both manual send and prompt auto-send.",
+  promptSubmitShortcutEnter: "Enter",
+  promptSubmitShortcutCtrlEnter: "Ctrl + Enter",
   promptDoubleClickSendLabel: "Double-click to send prompt",
   promptDoubleClickSendDesc:
     "When enabled, double-click sends the prompt directly. Prompts with variables are sent after confirmation.",
@@ -864,9 +868,12 @@ Please output the optimized code block directly, followed by a brief summary of 
   // ======== Shortcuts Settings Page ========
   navShortcuts: "Keyboard Shortcuts",
   shortcutsPageDesc: "Configure keyboard shortcuts for quick actions",
+  shortcutsInteractionGroup: "Independent Settings",
+  shortcutsInteractionGroupDesc:
+    "Settings in this group are always active and are not affected by the Enable Custom Shortcuts toggle",
   shortcutsGlobalSettings: "Shortcut Settings",
-  enableShortcuts: "Enable Shortcuts",
-  enableShortcutsDesc: "Enable or disable all keyboard shortcuts",
+  enableShortcuts: "Enable Custom Shortcuts",
+  enableShortcutsDesc: "Enable or disable all custom keyboard shortcuts",
   globalShortcutUrl: "Global Shortcut URL",
   globalShortcutUrlDesc: "URL to open when pressing global shortcut Alt+G",
   resetShortcuts: "Reset to Defaults",
@@ -885,7 +892,7 @@ Please output the optimized code block directly, followed by a brief summary of 
   shortcutCategoryPanel: "Panel",
   shortcutCategoryOutline: "Outline",
   shortcutCategoryConversation: "Conversation",
-  shortcutCategoryEdit: "Edit",
+  shortcutCategoryEdit: "Interaction Control",
 
   // Shortcut Names
   shortcutScrollTop: "Scroll to Top",

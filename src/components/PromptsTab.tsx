@@ -55,8 +55,13 @@ export const PromptsTab: React.FC<PromptsTabProps> = ({
   onPromptSelect,
   selectedPromptId,
 }) => {
+  const DOUBLE_CLICK_DELAY_MS = 340
+
   const doubleClickToSend = useSettingsStore(
     (state) => state.settings.features?.prompts?.doubleClickToSend ?? false,
+  )
+  const submitShortcut = useSettingsStore(
+    (state) => state.settings.features?.prompts?.submitShortcut ?? "enter",
   )
 
   const [prompts, setPrompts] = useState<Prompt[]>([])
@@ -235,7 +240,7 @@ export const PromptsTab: React.FC<PromptsTabProps> = ({
     if (success) {
       let submitSuccess = true
       if (submitAfterInsert) {
-        submitSuccess = await manager.submitPrompt()
+        submitSuccess = await manager.submitPrompt(submitShortcut)
         if (!submitSuccess) {
           showToast(t("promptSendFailed") || "发送失败，提示词已保留在输入框中")
         }
@@ -283,7 +288,7 @@ export const PromptsTab: React.FC<PromptsTabProps> = ({
     clickTimerRef.current = window.setTimeout(() => {
       clickTimerRef.current = null
       void handleSelect(prompt)
-    }, 220)
+    }, DOUBLE_CLICK_DELAY_MS)
   }
 
   const handlePromptDoubleClick = (prompt: Prompt) => {

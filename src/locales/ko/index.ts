@@ -253,6 +253,10 @@ export const ko = {
   promptMergeSuccess: "병합됨: {updated}개 업데이트, {added}개 추가",
   promptSettingsTitle: "프롬프트 설정",
   promptSettingsDesc: "프롬프트 탭의 상호작용을 설정합니다",
+  promptSubmitShortcutLabel: "전송 단축키",
+  promptSubmitShortcutDesc: "수동 전송과 프롬프트 자동 전송 모두에 적용됩니다.",
+  promptSubmitShortcutEnter: "Enter",
+  promptSubmitShortcutCtrlEnter: "Ctrl + Enter",
   promptDoubleClickSendLabel: "더블클릭으로 프롬프트 전송",
   promptDoubleClickSendDesc:
     "활성화하면 프롬프트를 더블클릭해 바로 전송합니다. 변수가 있는 프롬프트는 확인 후 전송됩니다.",
@@ -815,9 +819,12 @@ export const ko = {
   // ======== Shortcuts Settings Page ========
   navShortcuts: "키보드 단축키",
   shortcutsPageDesc: "빠른 작업을 위한 키보드 단축키 구성",
+  shortcutsInteractionGroup: "독립 설정",
+  shortcutsInteractionGroupDesc:
+    '이 그룹의 설정은 항상 적용되며 "사용자 정의 단축키 활성화" 토글의 영향을 받지 않습니다',
   shortcutsGlobalSettings: "단축키 설정",
-  enableShortcuts: "단축키 활성화",
-  enableShortcutsDesc: "모든 키보드 단축키를 활성화 또는 비활성화",
+  enableShortcuts: "사용자 정의 단축키 활성화",
+  enableShortcutsDesc: "모든 사용자 정의 키보드 단축키를 활성화 또는 비활성화",
   globalShortcutUrl: "글로벌 단축키 URL",
   globalShortcutUrlDesc: "글로벌 단축키 Alt+G를 누를 때 열리는 URL",
   resetShortcuts: "기본값으로 재설정",
@@ -837,7 +844,7 @@ export const ko = {
   shortcutCategoryPanel: "패널",
   shortcutCategoryOutline: "개요",
   shortcutCategoryConversation: "대화",
-  shortcutCategoryEdit: "편집",
+  shortcutCategoryEdit: "상호작용 제어",
 
   // Shortcut Names
   shortcutScrollTop: "맨 위로 스크롤",

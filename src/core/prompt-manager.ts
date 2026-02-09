@@ -7,6 +7,7 @@
 
 import type { SiteAdapter } from "~adapters/base"
 import { VIRTUAL_CATEGORY } from "~constants"
+import { SITE_IDS } from "~constants/defaults"
 import { DOMToolkit } from "~utils/dom-toolkit"
 import {
   filterPrompts,
@@ -15,6 +16,8 @@ import {
   usePromptsStore,
 } from "~stores/prompts-store"
 import type { Prompt } from "~utils/storage"
+
+export const AI_STUDIO_SHORTCUT_SYNC_EVENT = "ophel:aistudio-submit-shortcut-synced"
 
 export class PromptManager {
   private adapter: SiteAdapter
@@ -227,6 +230,46 @@ export class PromptManager {
     return null
   }
 
+  syncAiStudioSubmitShortcut(submitShortcut: "enter" | "ctrlEnter" = "enter"): boolean {
+    if (this.adapter.getSiteId() !== SITE_IDS.AISTUDIO) return false
+
+    const expectedBehavior = submitShortcut === "ctrlEnter" ? 2 : 1
+    let pref: Record<string, unknown> = {}
+
+    const prefRaw = localStorage.getItem("aiStudioUserPreference")
+    if (prefRaw) {
+      try {
+        const parsed = JSON.parse(prefRaw)
+        if (parsed && typeof parsed === "object") {
+          pref = parsed as Record<string, unknown>
+        }
+      } catch {
+        // ignore malformed localStorage data
+      }
+    }
+
+    if (pref["enterKeyBehavior"] === expectedBehavior) return false
+
+    try {
+      localStorage.setItem(
+        "aiStudioUserPreference",
+        JSON.stringify({ ...pref, enterKeyBehavior: expectedBehavior }),
+      )
+    } catch {
+      return false
+    }
+
+    window.dispatchEvent(
+      new CustomEvent(AI_STUDIO_SHORTCUT_SYNC_EVENT, {
+        detail: {
+          submitShortcut: expectedBehavior === 2 ? "ctrlEnter" : "enter",
+        },
+      }),
+    )
+
+    return true
+  }
+
   private async waitForSubmitConfirmation(
     initialContent: string,
     submitSelectors: string[],
@@ -261,7 +304,8 @@ export class PromptManager {
     return false
   }
 
-  async submitPrompt(): Promise<boolean> {
+  async submitPrompt(submitShortcut?: "enter" | "ctrlEnter"): Promise<boolean> {
+    this.syncAiStudioSubmitShortcut(submitShortcut ?? "enter")
     const submitSelectors = this.adapter.getSubmitButtonSelectors()
     const editor = this.adapter.getTextareaElement() || this.adapter.findTextarea()
     const initialContent = this.getEditorContent(editor)
@@ -298,7 +342,12 @@ export class PromptManager {
       if (!activeEditor) return false
 
       activeEditor.focus()
-      const keyConfig = this.adapter.getSubmitKeyConfig()
+      const keyConfig =
+        submitShortcut === "ctrlEnter"
+          ? { key: "Ctrl+Enter" as const }
+          : submitShortcut === "enter"
+            ? { key: "Enter" as const }
+            : this.adapter.getSubmitKeyConfig()
       const needModifier = keyConfig.key === "Ctrl+Enter"
       const isMac = /Mac|iPhone|iPad|iPod/.test(navigator.platform)
       const eventInit: KeyboardEventInit = {

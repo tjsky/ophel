@@ -185,6 +185,10 @@ export const zhTW = {
   promptMergeSuccess: "已合併：更新 {updated} 個，新增 {added} 個",
   promptSettingsTitle: "提示詞設定",
   promptSettingsDesc: "設定提示詞 Tab 的互動行為",
+  promptSubmitShortcutLabel: "發送快捷鍵",
+  promptSubmitShortcutDesc: "同時套用於手動發送與提示詞自動發送。",
+  promptSubmitShortcutEnter: "Enter",
+  promptSubmitShortcutCtrlEnter: "Ctrl + Enter",
   promptDoubleClickSendLabel: "雙擊提示詞直接發送",
   promptDoubleClickSendDesc: "開啟後，雙擊提示詞會直接發送；含變數的提示詞會在確認後發送",
   promptSent: "提示詞已發送",
@@ -832,9 +836,11 @@ export const zhTW = {
   // ======== 快捷鍵設置頁面 ========
   navShortcuts: "快捷鍵位",
   shortcutsPageDesc: "配置鍵盤快捷鍵以快速執行操作",
+  shortcutsInteractionGroup: "獨立設定",
+  shortcutsInteractionGroupDesc: "此分組設定會持續生效，不受「啟用自訂快捷鍵」開關影響",
   shortcutsGlobalSettings: "快捷鍵設置",
-  enableShortcuts: "啟用快捷鍵",
-  enableShortcutsDesc: "啟用或禁用所有鍵盤快捷鍵",
+  enableShortcuts: "啟用自訂快捷鍵",
+  enableShortcutsDesc: "啟用或禁用所有自訂鍵盤快捷鍵",
   globalShortcutUrl: "全域快捷鍵開啟的 URL",
   globalShortcutUrlDesc: "按下全域快捷鍵 Alt+G 時開啟的網址",
   resetShortcuts: "恢復預設快捷鍵",
@@ -853,7 +859,7 @@ export const zhTW = {
   shortcutCategoryPanel: "面板",
   shortcutCategoryOutline: "大綱",
   shortcutCategoryConversation: "會話",
-  shortcutCategoryEdit: "編輯",
+  shortcutCategoryEdit: "互動控制",
 
   // 快捷鍵功能名稱
   shortcutScrollTop: "去頂部",

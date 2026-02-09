@@ -287,6 +287,10 @@ export const zhCN = {
   promptMergeSuccess: "已合并：更新 {updated} 个，新增 {added} 个",
   promptSettingsTitle: "提示词设置",
   promptSettingsDesc: "配置提示词 Tab 的交互行为",
+  promptSubmitShortcutLabel: "发送快捷键",
+  promptSubmitShortcutDesc: "同时作用于手动发送与提示词自动发送。",
+  promptSubmitShortcutEnter: "Enter",
+  promptSubmitShortcutCtrlEnter: "Ctrl + Enter",
   promptDoubleClickSendLabel: "双击提示词直接发送",
   promptDoubleClickSendDesc: "开启后，双击提示词会直接发送；含变量的提示词会在变量确认后发送",
   promptSent: "提示词已发送",
@@ -844,9 +848,11 @@ export const zhCN = {
   // ======== 快捷键设置页面 ========
   navShortcuts: "快捷键位",
   shortcutsPageDesc: "配置键盘快捷键以快速执行操作",
+  shortcutsInteractionGroup: "独立设置",
+  shortcutsInteractionGroupDesc: "此分组设置始终生效，不受“启用自定义快捷键”开关影响",
   shortcutsGlobalSettings: "快捷键设置",
-  enableShortcuts: "启用快捷键",
-  enableShortcutsDesc: "启用或禁用所有键盘快捷键",
+  enableShortcuts: "启用自定义快捷键",
+  enableShortcutsDesc: "启用或禁用所有自定义键盘快捷键",
   globalShortcutUrl: "全局快捷键打开的 URL",
   globalShortcutUrlDesc: "按下全局快捷键 Alt+G 时打开的网址",
   resetShortcuts: "恢复默认快捷键",
@@ -865,7 +871,7 @@ export const zhCN = {
   shortcutCategoryPanel: "面板",
   shortcutCategoryOutline: "大纲",
   shortcutCategoryConversation: "会话",
-  shortcutCategoryEdit: "编辑",
+  shortcutCategoryEdit: "交互控制",
 
   // 快捷键功能名称
   shortcutScrollTop: "去顶部",

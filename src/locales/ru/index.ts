@@ -248,6 +248,10 @@ export const ru = {
   promptMergeSuccess: "Готово: {updated} обновлено, {added} новых",
   promptSettingsTitle: "Настройки промптов",
   promptSettingsDesc: "Настройка взаимодействия во вкладке промптов",
+  promptSubmitShortcutLabel: "Горячая клавиша отправки",
+  promptSubmitShortcutDesc: "Применяется и к ручной отправке, и к автоотправке промптов.",
+  promptSubmitShortcutEnter: "Enter",
+  promptSubmitShortcutCtrlEnter: "Ctrl + Enter",
   promptDoubleClickSendLabel: "Отправлять промпт двойным кликом",
   promptDoubleClickSendDesc:
     "Если включено, двойной клик сразу отправляет промпт. Промпты с переменными отправляются после подтверждения.",
@@ -803,9 +807,12 @@ export const ru = {
   // ======== Shortcuts Settings Page ========
   navShortcuts: "Горячие клавиши",
   shortcutsPageDesc: "Ускорение работы кнопками",
+  shortcutsInteractionGroup: "Независимые настройки",
+  shortcutsInteractionGroupDesc:
+    "Настройки этой группы всегда активны и не зависят от переключателя «Включить пользовательские сочетания»",
   shortcutsGlobalSettings: "Настройки клавиш",
-  enableShortcuts: "Включить кнопки",
-  enableShortcutsDesc: "Всё сразу",
+  enableShortcuts: "Включить пользовательские сочетания",
+  enableShortcutsDesc: "Включить или отключить все пользовательские клавиатурные сочетания",
   globalShortcutUrl: "Глобальная ссылка",
   globalShortcutUrlDesc: "Что открывать через Alt+G",
   resetShortcuts: "Сброс в ноль",
@@ -824,7 +831,7 @@ export const ru = {
   shortcutCategoryPanel: "Панель",
   shortcutCategoryOutline: "Содержание",
   shortcutCategoryConversation: "Чаты",
-  shortcutCategoryEdit: "Правка",
+  shortcutCategoryEdit: "Управление взаимодействием",
 
   // Shortcut Names
   shortcutScrollTop: "В самый верх",

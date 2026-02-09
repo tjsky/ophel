@@ -250,6 +250,11 @@ export const de = {
   promptMergeSuccess: "Fertig: {updated} aktualisiert, {added} neu",
   promptSettingsTitle: "Prompt-Einstellungen",
   promptSettingsDesc: "Interaktionen im Prompt-Tab konfigurieren",
+  promptSubmitShortcutLabel: "Sende-Tastenkürzel",
+  promptSubmitShortcutDesc:
+    "Gilt sowohl für manuelles Senden als auch für automatisches Senden von Prompts.",
+  promptSubmitShortcutEnter: "Enter",
+  promptSubmitShortcutCtrlEnter: "Ctrl + Enter",
   promptDoubleClickSendLabel: "Prompt per Doppelklick senden",
   promptDoubleClickSendDesc:
     "Wenn aktiviert, sendet ein Doppelklick den Prompt direkt. Prompts mit Variablen werden nach dem Bestätigen gesendet.",
@@ -806,9 +811,12 @@ Gib den Code und eine Zusammenfassung der Verbesserungen aus.`,
   // ======== Shortcuts Settings Page ========
   navShortcuts: "Tastaturkürzel",
   shortcutsPageDesc: "Schneller arbeiten mit Shortcuts",
+  shortcutsInteractionGroup: "Unabhängige Einstellungen",
+  shortcutsInteractionGroupDesc:
+    "Die Einstellungen in dieser Gruppe sind immer aktiv und werden nicht vom Schalter „Benutzerdefinierte Shortcuts aktivieren“ beeinflusst",
   shortcutsGlobalSettings: "Shortcut-Einstellungen",
-  enableShortcuts: "Shortcuts aktivieren",
-  enableShortcutsDesc: "Alle an- oder ausschalten",
+  enableShortcuts: "Benutzerdefinierte Shortcuts aktivieren",
+  enableShortcutsDesc: "Alle benutzerdefinierten Tastaturkürzel aktivieren oder deaktivieren",
   globalShortcutUrl: "Globaler URL-Shortcut",
   globalShortcutUrlDesc: "Was bei Alt+G geöffnet wird",
   resetShortcuts: "Werkszustand",
@@ -827,7 +835,7 @@ Gib den Code und eine Zusammenfassung der Verbesserungen aus.`,
   shortcutCategoryPanel: "Panel",
   shortcutCategoryOutline: "Verzeichnis",
   shortcutCategoryConversation: "Chats",
-  shortcutCategoryEdit: "Bearbeiten",
+  shortcutCategoryEdit: "Interaktionssteuerung",
 
   // Shortcut Names
   shortcutScrollTop: "Ganz nach oben",
