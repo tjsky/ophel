@@ -1922,6 +1922,7 @@ export const App = () => {
 
   const themeSites = settings?.theme?.sites
   const syncUnpin = settings?.features?.conversations?.syncUnpin
+  const syncDelete = settings?.features?.conversations?.syncDelete
   const inlineBookmarkMode = settings?.features?.outline?.inlineBookmarkMode
   const hasSettings = Boolean(settings)
   const collapsedButtons = settings?.collapsedButtons || DEFAULT_SETTINGS.collapsedButtons
@@ -2026,8 +2027,9 @@ export const App = () => {
     if (!conversationManager) return
     conversationManager.updateSettings({
       syncUnpin: syncUnpin ?? false,
+      syncDelete: syncDelete ?? true,
     })
-  }, [conversationManager, syncUnpin])
+  }, [conversationManager, syncUnpin, syncDelete])
 
   // 初始化页面内收藏图标
   useEffect(() => {

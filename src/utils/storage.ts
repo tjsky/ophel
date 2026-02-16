@@ -176,6 +176,7 @@ export interface Settings {
     conversations: {
       enabled: boolean
       syncUnpin: boolean
+      syncDelete: boolean
       folderRainbow: boolean
     }
     outline: {
@@ -362,6 +363,7 @@ export const DEFAULT_SETTINGS: Settings = {
     conversations: {
       enabled: true,
       syncUnpin: false,
+      syncDelete: true,
       folderRainbow: true,
     },
     outline: {
