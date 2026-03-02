@@ -973,9 +973,20 @@ export class GeminiAdapter extends SiteAdapter {
     return "user-query"
   }
 
+  /**
+   * 清理用户提问元素，移除辅助可访问性节点。
+   */
+  private sanitizeUserQueryElement(element: Element): Element {
+    const clone = element.cloneNode(true) as Element
+    const hiddenNodes = clone.querySelectorAll(".cdk-visually-hidden")
+    hiddenNodes.forEach((node) => node.remove())
+    return clone
+  }
+
   extractUserQueryText(element: Element): string {
-    const queryText = element.querySelector(".query-text")
-    const target = queryText || element
+    const sanitized = this.sanitizeUserQueryElement(element)
+    const queryText = sanitized.querySelector(".query-text")
+    const target = queryText || sanitized
     return this.extractTextWithLineBreaks(target)
   }
 
@@ -984,10 +995,11 @@ export class GeminiAdapter extends SiteAdapter {
    * Gemini 标准版：将按行拆分的 .query-text-line 合并为完整 Markdown
    */
   extractUserQueryMarkdown(element: Element): string {
-    const lines = element.querySelectorAll(".query-text-line")
+    const sanitized = this.sanitizeUserQueryElement(element)
+    const lines = sanitized.querySelectorAll(".query-text-line")
     if (lines.length === 0) {
       // 回退：使用 extractUserQueryText
-      return this.extractUserQueryText(element)
+      return this.extractUserQueryText(sanitized)
     }
 
     const textLines = Array.from(lines).map((line) => {
