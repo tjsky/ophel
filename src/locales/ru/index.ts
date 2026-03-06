@@ -567,6 +567,10 @@ export const ru = {
   conversationsFolderNamePlaceholder: "Введите имя...",
   conversationsSyncEmpty: "Ничего не найдено",
   conversationsSyncNoChange: "Без изменений",
+  conversationsSyncNoSidebarItems:
+    "В боковой панели не найдено разговоров. Откройте боковую панель и повторите попытку.",
+  conversationsSyncResult:
+    "Синхронизация завершена: проверено {scanned}, добавлено {added}, обновлено {updated}",
   conversationsLocate: "Найти текущий",
   conversationsLocateSuccess: "Найдено",
   conversationsLocateNotFound: "Нет в списке, синхро...",

@@ -570,6 +570,10 @@ export const pt = {
   conversationsFolderNamePlaceholder: "Digite o nome...",
   conversationsSyncEmpty: "Sem chats encontrados",
   conversationsSyncNoChange: "Sem mudanças",
+  conversationsSyncNoSidebarItems:
+    "Nenhuma conversa detectada na barra lateral. Abra a barra e tente novamente.",
+  conversationsSyncResult:
+    "Sincronização concluída: {scanned} verificadas, {added} adicionadas, {updated} atualizadas",
   conversationsLocate: "Localizar atual",
   conversationsLocateSuccess: "Encontrado",
   conversationsLocateNotFound: "Não encontrado, sincronizando...",

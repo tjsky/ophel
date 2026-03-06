@@ -571,6 +571,10 @@ export const de = {
   conversationsFolderNamePlaceholder: "Name eingeben...",
   conversationsSyncEmpty: "Keine Chats gefunden",
   conversationsSyncNoChange: "Keine Änderungen",
+  conversationsSyncNoSidebarItems:
+    "Keine Konversationen in der Seitenleiste erkannt. Öffne die Seitenleiste und versuche es erneut.",
+  conversationsSyncResult:
+    "Synchronisierung abgeschlossen: {scanned} geprüft, {added} hinzugefügt, {updated} aktualisiert",
   conversationsLocate: "Aktuellen finden",
   conversationsLocateSuccess: "Gefunden",
   conversationsLocateNotFound: "Nicht gefunden, synchronisiere...",

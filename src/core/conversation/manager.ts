@@ -801,22 +801,26 @@ export class ConversationManager {
         if (existing.title !== item.title) {
           updates.title = item.title
           needsUpdate = true
-          updatedCount++
         }
         if (item.isPinned && !existing.pinned) {
           updates.pinned = true
           needsUpdate = true
-          updatedCount++
         } else if (!item.isPinned && existing.pinned && this.syncUnpin) {
           updates.pinned = false
           needsUpdate = true
-          updatedCount++
         }
-        if (!existing.siteId) updates.siteId = this.siteAdapter.getSiteId()
-        if (item.cid && !existing.cid) updates.cid = item.cid
+        if (!existing.siteId) {
+          updates.siteId = this.siteAdapter.getSiteId()
+          needsUpdate = true
+        }
+        if (item.cid && !existing.cid) {
+          updates.cid = item.cid
+          needsUpdate = true
+        }
 
         if (needsUpdate) {
           store.updateConversation(storageKey, updates)
+          updatedCount++
         }
       } else {
         // 新会话

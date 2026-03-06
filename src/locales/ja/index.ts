@@ -601,6 +601,9 @@ export const ja = {
   conversationsFolderNamePlaceholder: "フォルダ名を入力",
   conversationsSyncEmpty: "会話が見つかりませんでした",
   conversationsSyncNoChange: "新しい会話はありません",
+  conversationsSyncNoSidebarItems:
+    "サイドバーで会話が検出できませんでした。サイドバーを開いて再試行してください。",
+  conversationsSyncResult: "同期完了: {scanned} 件確認、{added} 件追加、{updated} 件更新",
   conversationsLocate: "現在の会話を表示",
   conversationsLocateSuccess: "会話を特定しました",
   conversationsLocateNotFound: "会話が記録にありません。同期を試みます...",

@@ -570,6 +570,10 @@ export const fr = {
   conversationsFolderNamePlaceholder: "Saisir le nom...",
   conversationsSyncEmpty: "Aucun chat trouvé",
   conversationsSyncNoChange: "Aucun changement",
+  conversationsSyncNoSidebarItems:
+    "Aucune conversation détectée dans la barre latérale. Ouvrez-la puis réessayez.",
+  conversationsSyncResult:
+    "Synchronisation terminée: {scanned} analysées, {added} ajoutées, {updated} mises à jour",
   conversationsLocate: "Localiser actuel",
   conversationsLocateSuccess: "Trouvé",
   conversationsLocateNotFound: "Non trouvé, synchronisation...",

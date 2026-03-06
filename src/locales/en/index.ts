@@ -619,6 +619,9 @@ export const en = {
   conversationsFolderNamePlaceholder: "Enter folder name",
   conversationsSyncEmpty: "No conversations found",
   conversationsSyncNoChange: "No new conversations",
+  conversationsSyncNoSidebarItems:
+    "No conversations detected in sidebar. Expand/open the sidebar and try again.",
+  conversationsSyncResult: "Sync complete: {scanned} scanned, {added} added, {updated} updated",
   conversationsLocate: "Locate current conversation",
   conversationsLocateSuccess: "Located current conversation",
   conversationsLocateNotFound: "Current conversation not tracked, syncing...",

@@ -613,6 +613,8 @@ export const zhCN = {
   conversationsFolderNamePlaceholder: "输入文件夹名称",
   conversationsSyncEmpty: "未找到会话",
   conversationsSyncNoChange: "无新会话",
+  conversationsSyncNoSidebarItems: "未在侧边栏检测到会话。请先展开/打开侧边栏后重试。",
+  conversationsSyncResult: "同步完成：扫描 {scanned} 条，新增 {added} 条，更新 {updated} 条",
   conversationsLocate: "定位当前对话",
   conversationsLocateSuccess: "已定位到当前对话",
   conversationsLocateNotFound: "当前对话未收录，正在同步...",

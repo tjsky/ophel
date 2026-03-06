@@ -540,6 +540,8 @@ export const zhTW = {
   conversationsFolderNamePlaceholder: "輸入資料夾名稱",
   conversationsSyncEmpty: "未找到會話",
   conversationsSyncNoChange: "無新會話",
+  conversationsSyncNoSidebarItems: "未在側邊欄偵測到會話。請先展開/開啟側邊欄後再試一次。",
+  conversationsSyncResult: "同步完成：掃描 {scanned} 筆，新增 {added} 筆，更新 {updated} 筆",
   conversationsLocate: "定位當前對話",
   conversationsLocateSuccess: "已定位到當前對話",
   conversationsLocateNotFound: "當前對話未收錄，正在同步...",

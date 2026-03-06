@@ -573,6 +573,9 @@ export const ko = {
   conversationsFolderNamePlaceholder: "폴더 이름 입력",
   conversationsSyncEmpty: "대화를 찾을 수 없습니다",
   conversationsSyncNoChange: "새로운 대화가 없습니다",
+  conversationsSyncNoSidebarItems:
+    "사이드바에서 대화를 찾지 못했습니다. 사이드바를 열고 다시 시도해 주세요.",
+  conversationsSyncResult: "동기화 완료: {scanned}개 확인, {added}개 추가, {updated}개 업데이트",
   conversationsLocate: "현재 대화 찾기",
   conversationsLocateSuccess: "현재 대화 위치를 찾았습니다",
   conversationsLocateNotFound: "현재 대화가 추적되지 않았습니다. 동기화 중...",
