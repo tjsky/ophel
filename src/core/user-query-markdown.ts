@@ -36,6 +36,10 @@ const USER_QUERY_MARKDOWN_CSS = `
   font-size: 15px;
   line-height: 1.6;
 }
+/* 图片宽度不大于消息气泡 */
+.img{
+    max-width:100%;
+}
 
 /* 代码块样式 - 紧凑、自动换行 */
 .gh-user-query-markdown pre {
