@@ -37,8 +37,8 @@ const USER_QUERY_MARKDOWN_CSS = `
   line-height: 1.6;
 }
 /* 图片宽度不大于消息气泡 */
-.img{
-    max-width:100%;
+.gh-user-query-markdown img {
+  max-width: 100%;
 }
 
 /* 代码块样式 - 紧凑、自动换行 */
